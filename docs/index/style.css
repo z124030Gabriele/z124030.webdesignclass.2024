@@ -1,0 +1,172 @@
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+header {
+    background-color: rgba(15, 13, 14, 0.9); 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: blue;
+    text-decoration: none;
+    font: bold 5px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.footer {
+    background-color: rgba(15, 13, 14, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0; /* Imposta il footer sempre in fondo alla pagina */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Assicura che il footer sia sopra gli altri elementi */
+}
+
+
+
+/* Stili per dispositivi fino a 768px (mobile) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Esempio di adattamento della dimensione del testo */
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+/* Stili per dispositivi tra 769px e 1024px (tablet) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px; /* Esempio di adattamento della dimensione del testo */
+    }
+}
+
+/* Stili per dispositivi oltre i 1024px (PC) */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 20px; /* Esempio di adattamento della dimensione del testo */
+    }
+}
+
+/*GRID*/
+
+#griglia{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /*background-image: url(../images/code.jpeg);*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-color: rgba(5, 14, 92, 1);*/
+}
+
+.quadrato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.quadrato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    border: 2px solid transparent; /* Aggiunto un bordo trasparente */
+    transition: all 0.3s ease; /* Transizione per un effetto animato */
+    border-radius: 10px; /* Arrotondare gli angoli */
+    padding: 20px; /* Aggiungere spazio intorno al testo */
+    margin: 10px; /* Aggiungere margine tra i bottoni */
+}
+
+.quadrato:hover {
+    transform: translateY(-5px); /* Sposta verso l'alto di 5px al passaggio del mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Aggiunto un'ombra per un effetto tridimensionale */
+    background-color: rebeccapurple; /* Cambia il colore di sfondo quando il mouse è sopra il bottone */
+}
+
+/*BUTTONS */
+
+.works {
+    background-color: rgba(15, 13, 14, 0.9); /* colore quadrato works */
+}
+
+.showcase {
+    background-color: rgba(15, 13, 14, 0.9); /* colore quadrato showcase */
+}
+
+.about {
+    background-color: rgba(15, 13, 14, 0.9); /* colore quadrato about */
+}
+
+.contact {
+    background-color: rgba(15, 13, 14, 0.9); /* colore quadrato contact */
+}
+
+.MainPage {
+    text-decoration: none; /* Rimuove il sottolineato */
+    color: white;
+}
+
+.MainPage:hover h2 {
+    color: rebeccapurple; /* Cambia il colore del testo in blu al passaggio del mouse */
+    transform: scale(1.1); /* Ingrandisce il testo del 10% al passaggio del mouse */
+}
+
+.home-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Regola la larghezza dell'immagine */
+    height: auto; /* Mantiene l'aspetto proporzionato */
+}
