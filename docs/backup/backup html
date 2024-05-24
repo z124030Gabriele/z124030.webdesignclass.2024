@@ -47,3 +47,19 @@
 </html>
 
 
+
+
+
+
+
+<div class="container">
+    <h1>I miei contatti</h1>
+    <div class="contact-icons">
+      <a href="mailto:tuamail@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/tuoinstagram/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/tuolinkein/"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  

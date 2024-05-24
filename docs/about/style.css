@@ -81,3 +81,92 @@ footer p {
   width: 30px;
   height: 30px;
 }
+
+.left-side {
+  display: flex;
+  justify-content: center; /* Per centrare l'immagine orizzontalmente */
+  align-items: center; /* Per centrare l'immagine verticalmente */
+  padding-top: 1em;
+}
+
+.left-side img {
+  max-width: 35%; /* Rende l'immagine al massimo la metà della larghezza del suo contenitore */
+  height: auto; /* Per mantenere l'aspect ratio */
+}
+
+
+.name {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.study {
+  text-align: left;
+}
+
+.study h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px; /* Aggiunge spazio sotto l'intestazione */
+}
+
+.study p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px; /* Aggiunge spazio sotto il paragrafo */
+}
+
+.study p strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.study p em {
+  font-style: italic;
+  color: #28a745;
+}
+
+.study-Uni a {
+  text-decoration: underline; /* Sottolinea il link per renderlo più evidente */
+  color: #dc3545;
+  font-weight: bold; /* Rende il testo del link più evidente */
+}
+
+.study-Uni a:hover {
+  color: #c82333; /* Cambia colore al passaggio del mouse per renderlo più evidente */
+}
+
+
+.Hobbies {
+  text-align: left;
+}
+
+.Hobbies h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Hobbies p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.Hobbies ul {
+  list-style-type: none; /* Rimuove i pallini della lista */
+  padding-left: 0; /* Rimuove il padding predefinito della lista */
+}
+
+.Hobbies li {
+  font-size: 20px;
+  margin-bottom: 10px; /* Aggiunge spazio tra gli elementi della lista */
+}
+
+
+.Hobbies,.study {
+  border: 10px solid #444; /* Colore crema per il bordo */
+  border-radius: 10px; /* Angoli smussati */
+  padding: 20px; /* Spazio interno per separare il contenuto dal bordo */
+}
