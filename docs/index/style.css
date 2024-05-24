@@ -5,9 +5,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: #FFFDD0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #FFFDD0;
 }
 
 header {
