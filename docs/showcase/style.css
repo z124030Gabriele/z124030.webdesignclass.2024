@@ -6,11 +6,11 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #FFFDD0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
+}
   
   .container {
     max-width: 1200px;
@@ -22,6 +22,7 @@
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    height: 10vh; /* Imposta l'altezza dell'header al 10% dell'altezza della viewport */
   }
   
   header h1 {
@@ -55,30 +56,108 @@
   }
   
   main {
-    flex-grow: 1;
+    flex-grow: 1; /* Fai espandere il main per occupare lo spazio rimanente */
+    overflow: auto; /* Aggiungi overflow:auto per gestire il contenuto che supera l'altezza del main */
   }
+
   
+  .title {
+    text-align: center;
+    padding-top: 3em;
+  }
+
+  .project {
+    display: flex;
+  }
+
+
+  .button {
+    background-color: #333; /* Colore del footer */
+    color: #fff;
+    padding: 30px 80px;
+    border: none;
+    border-radius: 20px; /* Renderlo rotondo */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+
+  .button:hover {
+    transform: scale(1.1); /* Ingrandisce il pulsante */
+    background-color: #8a2be2; /* Colore viola */
+    font-size: 28px;
+  }
+
+  .site1, .site2 {
+    padding-top: 6em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site1 img, .site2 img {
+    max-width: 70%;
+    margin-bottom: 20px; /* Spazio sotto l'immagine */
+  }
+
+  .site1 {
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .site2 {
+    margin-left: 10px;
+    text-align: center;
+  }
+
+
+
+
+
   footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    height: 10vh; /* Imposta l'altezza del footer al 10% dell'altezza della viewport */
   }
   
   footer p {
     margin: 0;
   }
   
-  .social {
-    display: flex;
-    align-items: center;
+
+  /* Stili per schermi di dimensioni superiori a 768px (PC) */
+@media (min-width: 769px) {
+  /* Aggiusta il layout per schermi di dimensioni superiori a 768px */
+  header {
+    padding: 20px 0;
   }
-  
-  .social a {
-    margin-right: 10px;
+  header h1 {
+    font-size: 24px;
   }
-  
-  .social img {
-    width: 30px;
-    height: 30px;
+  footer {
+    padding: 20px 0;
   }
-  
+  footer p {
+    font-size: 1em;
+  }
+}
+
+/* Stili per schermi di dimensioni inferiori o uguali a 768px */
+@media (max-width: 768px) {
+  /* Aggiusta il layout per schermi di dimensioni inferiori o uguali a 768px */
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  footer {
+    padding: 10px 0;
+  }
+  footer p {
+    font-size: 0.8em;
+  }
+}

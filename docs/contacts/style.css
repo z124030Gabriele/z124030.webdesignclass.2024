@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #FFFDD0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -21,12 +21,14 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 1.5em 0; /* Utilizzo di unità relative per il padding */
+  width: 100%; /* L'header occupa tutta la larghezza */
+  height: 80px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5em; /* Dimensione del testo in unità relative */
 }
 
 nav ul {
@@ -56,57 +58,44 @@ nav ul li a:hover {
 
 main {
   flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
 }
 
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 1.5em 0; /* Utilizzo di unità relative per il padding */
+  width: 100%; /* Il footer occupa tutta la larghezza */
+  height: 80px;
 }
 
 footer p {
   margin: 0;
+  font-size: 1.0em;
 }
-
-.social {
-  display: flex;
-  align-items: center;
-}
-
-.social a {
-  margin-right: 10px;
-}
-
-.social img {
-  width: 30px;
-  height: 30px;
-}
-
 
 
 .container1 {
-  padding-top: 2em;
+  padding-top: 3fm;
   max-width: 600px;
-  margin: auto;
   text-align: center;
-  flex: 1;
 }
 
 #write1 {
   color: #333;
   margin-bottom: 30px; /* Aggiunge del margine inferiore all'h2 */
+  padding-top: 2em;
 }
 
 .contact-container {
   background-color: #333;
   color: #fff;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: flex; /* Utilizza flexbox */
-  flex-direction: column; /* Allinea verticalmente gli elementi */
-  align-items: center; /* Allinea centralmente gli elementi */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-icons {
@@ -117,7 +106,7 @@ footer p {
 .contact-icons a {
   color: #fff;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-right: 10px;
   transition: all 0.3s ease;
 }
@@ -125,9 +114,40 @@ footer p {
 .contact-icons a:hover {
   color: #8a2be2;
   transform: scale(1.2);
+  font-size: 2.2em;
 }
 
-.contact-icons span {
-  vertical-align: middle;
-  font-size: 1.2em;
+
+/* Stili per schermi di dimensioni superiori a 768px (PC) */
+@media (min-width: 769px) {
+  /* Aggiusta il layout per schermi di dimensioni superiori a 768px */
+  header {
+    padding: 20px 0;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  footer {
+    padding: 20px 0;
+  }
+  footer p {
+    font-size: 1em;
+  }
+}
+
+/* Stili per schermi di dimensioni inferiori o uguali a 768px */
+@media (max-width: 768px) {
+  /* Aggiusta il layout per schermi di dimensioni inferiori o uguali a 768px */
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  footer {
+    padding: 10px 0;
+  }
+  footer p {
+    font-size: 0.8em;
+  }
 }

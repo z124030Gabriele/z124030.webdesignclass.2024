@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #FFFDD0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -68,19 +68,7 @@ footer p {
   margin: 0;
 }
 
-.social {
-  display: flex;
-  align-items: center;
-}
 
-.social a {
-  margin-right: 10px;
-}
-
-.social img {
-  width: 30px;
-  height: 30px;
-}
 
 .left-side {
   display: flex;
@@ -119,22 +107,26 @@ footer p {
 
 .study p strong {
   font-weight: bold;
-  color: #007bff;
+  color: #dc3545;
 }
 
 .study p em {
   font-style: italic;
-  color: #28a745;
+  color: #dc3545;
 }
 
 .study-Uni a {
   text-decoration: underline; /* Sottolinea il link per renderlo più evidente */
-  color: #dc3545;
+  color: blue;
   font-weight: bold; /* Rende il testo del link più evidente */
 }
 
 .study-Uni a:hover {
   color: #c82333; /* Cambia colore al passaggio del mouse per renderlo più evidente */
+  transform: translateY(-5px); /* Sposta verso l'alto di 5px al passaggio del mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Aggiunto un'ombra per un effetto tridimensionale */
+  background-color: #FFFDD0; /* Cambia il colore di sfondo quando il mouse è sopra il bottone */
+
 }
 
 
