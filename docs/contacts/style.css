@@ -1,34 +1,33 @@
+/* Resetting default margin, padding, and box-sizing */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* sets the box model to include the padding and border within the element's specified width and height */
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #FFFDD0;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* turns the selected element into a flex container, allowing what it's inside to become flexible items that can be arranged horizontally or vertically within the container*/
+  flex-direction: column; /* Specifies how flex items are placed in the flex container. */
   min-height: 100vh;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Horizontally center an element within its container. */
   padding: 0 20px;
 }
 
 header {
   background-color: #333;
   color: #fff;
-  padding: 1.5em 0; /* Utilizzo di unità relative per il padding */
-  width: 100%; /* L'header occupa tutta la larghezza */
-  height: 80px;
+  padding: 20px 0;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.5em; /* Dimensione del testo in unità relative */
+  font-size: 1.5em; /* Font size in relative units. */
 }
 
 nav ul {
@@ -38,35 +37,44 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+  display: inline; /*Makes the item an inline item wich let other text to appear beside it nor under*/
   margin-right: 20px;
-  position: relative; /* Posizionamento relativo per consentire lo spostamento */
+  position: relative; /* Relative positioning to allow movement. */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease; /* Transizione per il cambiamento di colore e ingrandimento */
+  transition: all 0.3s ease; /* Transition for color change and enlargement. */
 }
 
 nav ul li a:hover {
-  color: #8a2be2; /* Colore viola */
-  transform: scale(1.2); /* Ingrandimento del 20% */
+  color: #8a2be2; /* Purple color. */
+  transform: scale(1.2); /* Upscaling by 20%. */
   position: relative;
-  z-index: 1; /* Porta il collegamento in primo piano */
+  z-index: 1; /* Brings the link to the foreground. */
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 1; /* Makes the element grow to occupy the available space inside the flex container. */
   display: flex;
-  justify-content: center; /* Centra il contenuto orizzontalmente */
+  justify-content: center; /* Centers the content horizontally. */
+  align-items: center; /* Centers the content vertically. */
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.container1 {
+  max-width: 600px; /* Reduces the maximum width for the container of contacts. */
+  width: 100%; /* Makes the container of contacts occupy the entire available width. */
+  text-align: center;
 }
 
 footer {
   background-color: #333;
   color: #fff;
-  padding: 1.5em 0; /* Utilizzo di unità relative per il padding */
-  width: 100%; /* Il footer occupa tutta la larghezza */
+  padding: 1.5em 0; /* Uses relative units for padding. */
+  width: 100%; /* Makes the footer occupy the entire width. */
   height: 80px;
 }
 
@@ -75,33 +83,18 @@ footer p {
   font-size: 1.0em;
 }
 
-
-.container1 {
-  padding-top: 3fm;
-  max-width: 600px;
-  text-align: center;
-}
-
 #write1 {
-  color: #333;
-  margin-bottom: 30px; /* Aggiunge del margine inferiore all'h2 */
-  padding-top: 2em;
+  color: #fff;
+  font-size: 36px;
 }
 
 .contact-container {
   background-color: #333;
-  color: #fff;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 15px; /* Rounded borders. */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adds a shadow effect. */
+  margin-top: 20px; /* Adds space above the contact box. */
 }
-
-.contact-icons {
-  margin-bottom: 30px; /* Aggiunge più spazio tra le icone dei contatti */
-}
-
 
 .contact-icons a {
   color: #fff;
@@ -112,15 +105,28 @@ footer p {
 }
 
 .contact-icons a:hover {
-  color: #8a2be2;
-  transform: scale(1.2);
+  color: #8a2be2; /* Purple color. */
+  transform: scale(1.2); /* Upscales the icon on hover. */
   font-size: 2.2em;
 }
 
+.contact-icons {
+  margin-bottom: 20px; /* Reduces space between contact icons. */
+}
 
-/* Stili per schermi di dimensioni superiori a 768px (PC) */
+.title-box {
+  text-align: center;
+  background-color: #333; /* Background color of the box. */
+  padding: 10px; /* Reduces internal space. */
+  border-radius: 15px; /* Rounded borders. */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adds a shadow effect. */
+  margin-bottom: 20px; /* Space between the box and contact box. */
+  width: 90%; /* Width of the box is 90% of the parent container. */
+  margin: auto; /* Centers the box horizontally. */
+}
+
+/* Media queries for screens larger than 768px */
 @media (min-width: 769px) {
-  /* Aggiusta il layout per schermi di dimensioni superiori a 768px */
   header {
     padding: 20px 0;
   }
@@ -135,19 +141,13 @@ footer p {
   }
 }
 
-/* Stili per schermi di dimensioni inferiori o uguali a 768px */
+/* Media queries for screens smaller than or equal to 768px */
 @media (max-width: 768px) {
-  /* Aggiusta il layout per schermi di dimensioni inferiori o uguali a 768px */
-  header {
-    padding: 10px 0;
+  .contact-container {
+    padding: 10px; /* Reduces padding for smaller devices. */
   }
-  header h1 {
-    font-size: 20px;
-  }
-  footer {
-    padding: 10px 0;
-  }
-  footer p {
-    font-size: 0.8em;
+
+  .contact-icons a {
+    font-size: 1.2em; /* Reduces the size of contact icons. */
   }
 }

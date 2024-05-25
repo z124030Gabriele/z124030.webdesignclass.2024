@@ -1,3 +1,4 @@
+/* Resetting default margin, padding, and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +9,13 @@ body {
   font-family: Arial, sans-serif;
   background-color: #FFFDD0;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*Specifies how flex items are placed in the flex container.*/
   min-height: 100vh;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /*horizontally center an element within its container*/
   padding: 0 20px;
 }
 
@@ -38,24 +39,24 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 20px;
-  position: relative; /* Posizionamento relativo per consentire lo spostamento */
+  position: relative; /* Relative positioning to allow movement. */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease; /* Transizione per il cambiamento di colore e ingrandimento */
+  transition: all 0.3s ease; /* Transition for color change and enlargement */
 }
 
 nav ul li a:hover {
-  color: #8a2be2; /* Colore viola */
-  transform: scale(1.2); /* Ingrandimento del 20% */
+  color: #8a2be2; 
+  transform: scale(1.2); /* Upscaling by 20% */
   position: relative;
-  z-index: 1; /* Porta il collegamento in primo piano */
+  z-index: 1; /* Brings the link to the foreground */
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 1;/*makes the element grow to occupy the available space inside the flex container*/
 }
 
 footer {
@@ -72,14 +73,14 @@ footer p {
 
 .left-side {
   display: flex;
-  justify-content: center; /* Per centrare l'immagine orizzontalmente */
-  align-items: center; /* Per centrare l'immagine verticalmente */
+  justify-content: center; /* To center the image horizontally */
+  align-items: center; /* To center the image vertically */
   padding-top: 1em;
 }
 
 .left-side img {
-  max-width: 35%; /* Rende l'immagine al massimo la metà della larghezza del suo contenitore */
-  height: auto; /* Per mantenere l'aspect ratio */
+  max-width: 35%; /* make the image maximum 35% the size of the container */
+  height: auto; /* too keep the aspect ration the same */
 }
 
 
@@ -95,14 +96,14 @@ footer p {
 .study h3 {
   font-size: 28px;
   color: #333;
-  margin-bottom: 10px; /* Aggiunge spazio sotto l'intestazione */
+  margin-bottom: 10px; 
 }
 
 .study p {
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.6; /*sets the height of each line of text within an element to be 1.6 times the font size.*/
   color: #444;
-  margin-bottom: 20px; /* Aggiunge spazio sotto il paragrafo */
+  margin-bottom: 20px; 
 }
 
 .study p strong {
@@ -116,17 +117,16 @@ footer p {
 }
 
 .study-Uni a {
-  text-decoration: underline; /* Sottolinea il link per renderlo più evidente */
+  text-decoration: underline; 
   color: blue;
-  font-weight: bold; /* Rende il testo del link più evidente */
+  font-weight: bold; 
 }
 
 .study-Uni a:hover {
-  color: #c82333; /* Cambia colore al passaggio del mouse per renderlo più evidente */
-  transform: translateY(-5px); /* Sposta verso l'alto di 5px al passaggio del mouse */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Aggiunto un'ombra per un effetto tridimensionale */
-  background-color: #FFFDD0; /* Cambia il colore di sfondo quando il mouse è sopra il bottone */
-
+  color: #c82333; 
+  transform: translateY(-5px); /* Moves up by 5px on mouse hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* add a shadow for a tridimensional effect */
+  background-color: #FFFDD0; 
 }
 
 
@@ -147,18 +147,52 @@ footer p {
 }
 
 .Hobbies ul {
-  list-style-type: none; /* Rimuove i pallini della lista */
-  padding-left: 0; /* Rimuove il padding predefinito della lista */
+  list-style-type: none; /* remove the dots from the list */
+  padding-left: 0; /* remove the original padding from the list */
 }
 
 .Hobbies li {
   font-size: 20px;
-  margin-bottom: 10px; /* Aggiunge spazio tra gli elementi della lista */
+  margin-bottom: 10px;
 }
 
 
 .Hobbies,.study {
-  border: 10px solid #444; /* Colore crema per il bordo */
-  border-radius: 10px; /* Angoli smussati */
-  padding: 20px; /* Spazio interno per separare il contenuto dal bordo */
+  border: 10px solid #444; 
+  border-radius: 10px; /* rounded border */
+  padding: 20px; 
+}
+
+
+.name h1 {
+  font-size: 36px; 
+  color: #8a2be2; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* add a shdow to enchance the text */
+}
+
+
+main {
+  padding-top: 20px; 
+}
+
+
+.profile-image {
+  border: 5px solid #444; 
+  border-radius: 50%; /* rounded pfp */
+}
+
+.study h3, .Hobbies h3 {
+  color: #8a2be2; 
+}
+
+.study p, .Hobbies p {
+  font-size: 18px; 
+  line-height: 1.4;
+  color: #333;
+}
+
+
+.description{
+  font-size: 1.4em;
+  padding-top: 1em;
 }
