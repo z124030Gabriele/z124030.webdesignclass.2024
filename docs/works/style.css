@@ -112,8 +112,9 @@ footer p {
   transition: transform 0.3s ease, color 0.3s ease; /* Aggiunto una transizione per il transform e il colore */
 }
 
-.description strong{
-  color: red;
+.description p strong {
+  font-weight: bold;
+  color: #dc3545;
 }
 
 .description a:hover {
