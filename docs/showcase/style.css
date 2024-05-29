@@ -67,7 +67,6 @@ main {
   color: #333; /* Changes text color to make it more appealing */
   font-size: 20px; /* Increases text size to emphasize it */
   margin-bottom: 20px; /* Reduces space between title and projects */
-  text-transform: uppercase; /* Transforms text to uppercase to make it stand out */
 }
 
 .project {
