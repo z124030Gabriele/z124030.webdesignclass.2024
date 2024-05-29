@@ -1,69 +1,175 @@
+/* Resetting default margin, padding, and box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFDD0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-    position: relative; /* Posizionamento relativo per consentire lo spostamento */
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease; /* Transizione per il cambiamento di colore e ingrandimento */
-  }
-  
-  nav ul li a:hover {
-    color: #8a2be2; /* Colore viola */
-    transform: scale(1.2); /* Ingrandimento del 20% */
-    position: relative;
-    z-index: 1; /* Porta il collegamento in primo piano */
-  }
-  
-  main {
-    flex-grow: 1;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  footer p {
-    margin: 0;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFDD0;
+  display: flex;
+  flex-direction: column; /*Specifies how flex items are placed in the flex container.*/
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /*horizontally center an element within its container*/
+  padding: 0 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  position: relative; /* Relative positioning to allow movement. */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Transition for color change and enlargement */
+}
+
+nav ul li a:hover {
+  color: #8a2be2; 
+  transform: scale(1.2); /* Upscaling by 20% */
+  position: relative;
+  z-index: 1; /* Brings the link to the foreground */
+}
+
+main {
+  flex-grow: 1;/*makes the element grow to occupy the available space inside the flex container*/
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+.left-side {
+  display: flex;
+  justify-content: center; /* To center the image horizontally */
+  align-items: center; /* To center the image vertically */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #333;
+  font-size: 3em;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.left-side a{
+  color: #8a2be2;
+}
+
+.description {
+  display: flex;
+  justify-content: center; /* To center the image horizontally */
+  align-items: center; /* To center the image vertically */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #333;
+  font-size: 2em;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.description a {
+  color: #8a2be2;
+  transition: transform 0.3s ease, color 0.3s ease; /* Aggiunto una transizione per il transform e il colore */
+}
+
+.description a:hover {
+  transform: scale(1.1); /* Enlarges the button */
+  color: blue; /* Blue color */
+}
+
+
+main {
+  padding-top: 20px; 
+}
+
+
+
+.study {
+  margin-bottom: 1em;
+}
+
+
+.study p {
+  font-size: 20px;
+  line-height: 1.6; /*sets the height of each line of text within an element to be 1.6 times the font size.*/
+  color: #fff;
+  margin-bottom: 20px; 
+  padding: 1em;
+}
+
+.study p strong {
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.study p em {
+  font-style: italic;
+  color: #dc3545;
+}
+
+.study-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea colonne flessibili */
+  gap: 20px; /* Spazio tra le colonne */
+  background-color: #333;
+  border-radius: 10px; /* Ridotto il bordo per rendere l'immagine più piccola */
+  overflow: hidden; /* Per evitare che il testo esca dai bordi */
+}
+
+.study-image {
+  display: flex; /* Per abilitare il centro all'interno della sua sezione */
+  justify-content: center; /* Per centrare l'immagine orizzontalmente */
+  align-items: center; /* Per centrare l'immagine verticalmente */
+}
+
+.study-image img {
+  max-width: 100%; /* Larghezza massima dell'immagine per garantire che non esca dai bordi */
+  height: auto; /* Per mantenere l'aspetto proporzionato durante il ridimensionamento */
+  padding: 4em;
+}
+
+
+.study-text {
+  color: #fff; /* Testo bianco per contrastare con lo sfondo scuro */
+  padding: 20px; /* Aggiunto un padding per separare il testo dai bordi */
+}
