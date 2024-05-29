@@ -69,6 +69,12 @@ main {
   margin-bottom: 20px; /* Reduces space between title and projects */
 }
 
+.title strong{
+  font-style: italic; /* Renderizza il testo in corsivo */
+  font-style: bold; /* Renderizza il testo in grassetto */
+  color: red; /* Imposta il colore del testo su rosso */
+}
+
 .project {
   display: flex; /* Displays project items in a flex container */
 }
